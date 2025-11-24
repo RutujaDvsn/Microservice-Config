@@ -1,11 +1,10 @@
 spring:
   application:
-    name: account-service
-    
+
   datasource:
-    url: ${url}
-    username: ${username}
-    password: ${password}
+    url: ${vault.db.url}
+    username: ${vault.db.username}
+    password: ${vault.db.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jdbc:
