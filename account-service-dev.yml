@@ -1,11 +1,16 @@
 spring:
-  application:
-
   datasource:
     url: ${vault.db.url}
     username: ${vault.db.username}
     password: ${vault.db.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
   jdbc:
     show-sql: true
