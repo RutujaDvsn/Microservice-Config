@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${vault.db.url}
-    username: ${vault.db.username}
-    password: ${vault.db.password}
+    url: ${vault:secret/account-service/dev:vault.db.url}
+    username: ${vault:secret/account-service/dev:vault.db.username}
+    password: ${vault:secret/account-service/dev:vault.db.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -11,9 +11,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-
-  jdbc:
-    show-sql: true
-
-server:
-  port: 8081
