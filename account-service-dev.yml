@@ -1,7 +1,7 @@
 spring:
   datasource:
-    url: ${vault.db.url}             
-    username: ${vault.db.username}   
+    url: ${vault.db.url}
+    username: ${vault.db.username}
     password: ${vault.db.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -11,3 +11,13 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    generate-ddl: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.datavsn.meb.accountservice: DEBUG   # Your package name
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
