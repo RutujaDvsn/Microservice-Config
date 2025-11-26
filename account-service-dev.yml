@@ -11,13 +11,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-    show-sql: true
-    generate-ddl: true
-
-logging:
-  level:
-    root: INFO
-    org.springframework: INFO
-    com.datavsn.meb.accountservice: DEBUG   # Your package name
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
